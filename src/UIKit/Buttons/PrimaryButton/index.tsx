@@ -8,7 +8,7 @@ export interface Props {
 const PrimaryButton = ({}: Props) => {
     return (
         <div>
-            
+            Coming soon...
         </div>
     );
 };

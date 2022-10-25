@@ -1,0 +1,33 @@
+.button {
+    padding: 6px 88px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border:  2px solid #4b4b4b7b;
+    transition: padding 0.07s, border-radius 0.1s, background-color 0.2s, transform .2s;
+}
+
+.button:active {
+    border-radius: 6px;
+    padding: 6px 85px;
+}
+
+.button_dark {
+    background-color: #383838;
+}
+.button_dark:hover {
+    background-color: #252525;
+}
+.button_dark:active {
+    background-color: #0e0e0e;
+}
+
+.button_blue {
+    background-color: #6E9DA6;
+}
+.button_blue:hover {
+    background-color: #698b92;
+}
+.button_blue:active {
+    background-color: #50696e;
+}

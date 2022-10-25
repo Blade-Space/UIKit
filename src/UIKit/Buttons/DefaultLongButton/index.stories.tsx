@@ -7,7 +7,18 @@ export default {
   component: DefaultLongButton,
 } as Meta;
 
-export const Default: Story<Props> = (args) => <DefaultLongButton {...args} />;
-Default.args = {};
+export const Success: Story<Props> = (args) => <DefaultLongButton {...args} />;
+Success.args = {
+    children: 'Click me to Success',
+    success: true,
+    onClick: () => {}
+};
+
+export const Interrupt: Story<Props> = (args) => <DefaultLongButton {...args} />;
+Interrupt.args = {
+    children: 'Click me to Interrupt',
+    success: false,
+    onClick: () => {}
+};
 
 
