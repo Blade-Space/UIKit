@@ -3,12 +3,12 @@ import styles from './index.module.css';
 
 export interface Props {
     children: JSX.Element | string
-    size: 'tiny 13px' | 'small 14px' | 'medium 15px' | 'default 16px' | 'large 24px'
-    bold: boolean
-    italic: boolean
-    pointer: boolean
-    color: 'white' | 'blue' | 'gray' | 'dark gray'
-    onClick: MouseEventHandler<HTMLParagraphElement>
+    size?: 'tiny 13px' | 'small 14px' | 'medium 15px' | 'default 16px' | 'large 24px'
+    bold?: boolean
+    italic?: boolean
+    pointer?: boolean
+    color?: 'white' | 'blue' | 'gray' | 'dark gray'
+    onClick?: MouseEventHandler<HTMLParagraphElement>
 }
 
 const Text = (

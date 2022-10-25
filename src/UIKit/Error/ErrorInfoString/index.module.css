@@ -1,0 +1,7 @@
+.error_info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.none_margins {margin: 0}
