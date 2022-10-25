@@ -10,7 +10,25 @@ export default {
 export const Default: Story<Props> = (args) => <DefaultButton {...args} />;
 Default.args = {
     children: 'Click me',
-    color: 'one',
+    success: true,
+    typical: false,
+    onClick: () => {}
+};
+
+export const Success: Story<Props> = (args) => <DefaultButton {...args} />;
+Success.args = {
+    children: 'Click me',
+    success: true,
+    typical: true,
+    onClick: () => {}
+};
+
+export const Interrupt: Story<Props> = (args) => <DefaultButton {...args} />;
+Interrupt.args = {
+    children: 'Click me',
+    success: false,
+    typical: true,
+    onClick: () => {}
 };
 
 
