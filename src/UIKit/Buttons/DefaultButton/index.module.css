@@ -12,7 +12,37 @@
 }
 
 .button:active {
-    background-color: #0e0e0e;
-    border-radius: 6px;
-    padding: 6px 22px;
+    animation-duration: 0.3s;
+    animation-name: bulp;
+    animation-iteration-count: 1;
 }
+
+@keyframes bulp {
+    from {
+        padding: 6px 25px;
+        border-radius: 8px;
+        background-color: #252525;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+  
+    25% {
+        background-color: #0e0e0e;
+        border-radius: 6px;
+        padding: 6px 22px;
+    }
+
+    75% {
+        background-color: #3e3e3e;
+        border-radius: 10px;
+        padding: 6px 28px;
+    }
+  
+    to {
+        padding: 6px 25px;
+        border-radius: 8px;
+        background-color: #252525;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+  }

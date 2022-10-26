@@ -8,9 +8,40 @@
 }
 
 .button:active {
-    border-radius: 6px;
-    padding: 6px 85px;
+    animation-duration: 0.3s;
+    animation-name: bulp;
+    animation-iteration-count: 1;
 }
+
+@keyframes bulp {
+    from {
+        padding: 6px 88px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-sizing: border-box;
+        border:  2px solid #4b4b4b7b;
+    }
+  
+    25% {
+        border:  2px solid #3030307b;
+        border-radius: 6px;
+        padding: 6px 85px;
+    }
+
+    75% {
+        border:  2px solid #6666667b;
+        padding: 6px 91px;
+        border-radius: 10px;
+    }
+  
+    to {
+        padding: 6px 88px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-sizing: border-box;
+        border:  2px solid #4b4b4b7b;
+    }
+  }
 
 .button_dark {
     background-color: #383838;
