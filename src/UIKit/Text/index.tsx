@@ -8,7 +8,8 @@ export interface Props {
     italic?: boolean
     pointer?: boolean
     color?: 'white' | 'blue' | 'gray' | 'dark gray'
-    onClick?: MouseEventHandler<HTMLParagraphElement>
+    onClick?: MouseEventHandler<HTMLParagraphElement>,
+    // font?: "Inconsolata"
 }
 
 const Text = (
@@ -19,7 +20,8 @@ const Text = (
             italic=false,
             pointer=false,
             color="white",
-            onClick
+            onClick,
+            // font="Inconsolata"
         }: Props) => {
 
     const colorConvertToHex = (color: Props["color"]) => {
@@ -46,7 +48,8 @@ const Text = (
                     fontWeight: bold ? 'bold' : 'normal',
                     fontStyle: italic ? 'italic' : 'normal',
                     color: colorConvertToHex(color),
-                    cursor: pointer ? 'pointer' : 'select'
+                    cursor: pointer ? 'pointer' : 'select',
+                    // fontFamily: font
                 }
             }
             onClick={onClick}
