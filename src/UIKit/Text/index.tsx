@@ -2,7 +2,7 @@ import React, { MouseEventHandler } from 'react';
 import styles from './index.module.css';
 
 export interface Props {
-    children: JSX.Element | string
+    children: React.ReactNode
     size?: 'tiny 13px' | 'small 14px' | 'medium 15px' | 'default 16px' | 'large 24px'
     bold?: boolean
     italic?: boolean
