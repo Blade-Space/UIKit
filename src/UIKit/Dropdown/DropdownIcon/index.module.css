@@ -1,0 +1,11 @@
+.active {
+    cursor: pointer;
+    transition: transform 0.7s;
+    transform: rotate(0deg);
+}
+
+.disable {
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: transform 0.7s;
+}
