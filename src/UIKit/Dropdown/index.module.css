@@ -1,0 +1,27 @@
+.dropdown{
+    background-color: #383838;
+    display: inline-block;
+    padding: 7px 26px;
+    border-radius: 6px;
+    border: 1px solid rgba(75, 75, 75, 0.5);
+    
+    position: relative;
+}
+
+.dropdown__select_item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .dropdown__select_item svg {
+    margin-left: 120px;
+} */
+
+.dropdown__extra_modal {
+    position: absolute;
+    /* top: 10px; */
+    margin-top: 20px;
+    left: 0;
+}
