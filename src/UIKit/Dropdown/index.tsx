@@ -3,11 +3,11 @@ import styles from './index.module.css';
 
 import Text from '../Text';
 import DropdownIcon from './DropdownIcon';
-import ExtraModalLayaout, {ExtraModalLayaoutItem} from '../Layouts/ExtraModalLayaout';
+import ExtraModal, {ExtraModalItemOrLine} from '../Modals/ExtraModal';
 
 export interface DropdownProps {
     defaultValue: string
-    items: ExtraModalLayaoutItem[]
+    items: ExtraModalItemOrLine[]
     description?: {
         text: string
         link: string
@@ -26,6 +26,7 @@ const Dropdown = ({defaultValue, items, description, onChange, width=230}: Dropd
         set_Default(value);
     }
 
+    // eslint-disable-next-line array-callback-return
     items.map((item) => {
         if (item.type === "item") {
             item.options!.onClick = () => {changeHandler(item.options!.children)}
@@ -39,7 +40,7 @@ const Dropdown = ({defaultValue, items, description, onChange, width=230}: Dropd
                 <DropdownIcon isActive={isActive} />
             </div>
             {isActive && 
-                <ExtraModalLayaout 
+                <ExtraModal 
                     description={description}
                     width={width}
                     items={items} 

@@ -5,31 +5,31 @@ import styles from './index.module.css';
 import Text from '../../Text';
 import SmallDescriptonLink from './SmallDescriptonLink';
 
-export type ExtraModalLayaoutItem = {
+export type ExtraModalItemOrLine = {
     type: "item" | "line"
     options?: ExtraModalItemProps
 }
 
-export interface ExtraModalLayaoutProps {
+export interface ExtraModalProps {
     width?: number
     className?: string
     children?: React.ReactNode
-    items?: ExtraModalLayaoutItem[]
+    items?: ExtraModalItemOrLine[]
     description?: {
         text: string
         link: string
     } 
 }
 
-const ExtraModalLayaout = ({children, items, description, className, width}: ExtraModalLayaoutProps) => {
+const ExtraModal = ({children, items, description, className, width}: ExtraModalProps) => {
     return (
         <div className={`${styles.modal} ${className}`} style={{width}}>
             {children && children}
             {items && items.map((item, index) => 
-                item.type == "line" ? 
+                item.type === "line" ? 
                     <div key={index} className={styles.description__line} /> 
                     : 
-                    item.type == "item" &&
+                    item.type === "item" &&
                     <ExtraModalItem
                         key={index}
                         className={styles.item}
@@ -52,4 +52,4 @@ const ExtraModalLayaout = ({children, items, description, className, width}: Ext
     );
 };
 
-export default ExtraModalLayaout;
+export default ExtraModal;
