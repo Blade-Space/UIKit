@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './index.module.css';
 
-export interface Props {
-
+export interface SystemIconProps {
+    icon: string
+    className?: string
 }
 
-const SystemIcon = ({}: Props) => {
+const SystemIcon = ({icon, className}: SystemIconProps) => {
+
+    const [isHover, serIsHover] = useState(false);
+
     return (
-        <div>
-            
+        <div 
+            onMouseEnter={() => serIsHover(prev=>true)} 
+            onMouseLeave={() => serIsHover(prev=>false)}
+            className={className}>
+            <img 
+                className={!isHover ? styles.icon : styles.iconHover}
+                src={icon} alt="" />
         </div>
     );
 };

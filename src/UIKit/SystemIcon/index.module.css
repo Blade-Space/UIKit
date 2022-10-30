@@ -1,0 +1,13 @@
+.icon {
+    /* width: 56px; */
+    transform: scale(1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.iconHover {
+    /* width: 58px; */
+    transform: scale(1.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
