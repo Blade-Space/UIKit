@@ -1,0 +1,32 @@
+.header {
+    background-color:#383838;
+    border: 1px solid #848484;
+    border-radius: 15px 15px 0px 0px;
+
+    height: 33px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    transition: width 0.3s;
+
+    cursor: grab;
+    display: grid; 
+    grid-template-columns: 2fr 8fr 2fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "buttons title nothing"; 
+}
+
+.header__buttons {
+    display: flex;
+    align-items: center;
+    grid-area: buttons;
+}
+.header__title { 
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+.header__nothing { grid-area: nothing; }
