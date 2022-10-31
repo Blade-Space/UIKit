@@ -1,8 +1,9 @@
 .button {
     padding: 6px 88px;
     border-radius: 8px;
+    display: inline-block;
     cursor: pointer;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border:  2px solid #4b4b4b7b;
     transition: padding 0.07s, border-radius 0.1s, background-color 0.2s, transform .2s;
 }
