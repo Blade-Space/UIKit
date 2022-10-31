@@ -8,6 +8,16 @@ export default {
 } as Meta;
 
 export const Default: Story<Props> = (args) => <ChooseModal {...args} />;
-Default.args = {};
+Default.args = {
+  message: "ssh_key worker",
+  onSuccess: {
+    handler: () => {alert("onSuccess")},
+    text: "continue"
+},
+  onInterrupt: {
+    handler: () => {alert("onInterrupt")},
+    text: "interrupt"
+}
+};
 
 

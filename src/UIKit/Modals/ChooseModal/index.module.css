@@ -1,0 +1,32 @@
+.container {
+    width: 305px;
+    height: 250px;
+    border-radius: 15px;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.container__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__mrg {
+    margin-top: 10px;
+}
