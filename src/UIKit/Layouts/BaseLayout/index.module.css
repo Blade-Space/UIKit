@@ -5,6 +5,8 @@
     transition: width 0.3s, height 0.3s;
     overflow-y: auto;
     display: relative;
+    resize: both;
+    min-width: 450px;
 }
 
 .container {

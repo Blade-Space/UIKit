@@ -6,7 +6,6 @@ import styles from './index.module.css';
 
 export interface BaseLayoutHeaderProps {
     title: string
-    width: string
     draggable?: boolean
     /**function for closing the window*/
     onClose?: React.MouseEventHandler<HTMLParagraphElement>
@@ -23,10 +22,10 @@ export interface BaseLayoutHeaderProps {
 
 const BaseLayoutHeader = (
     {
-        title,onClose,onHide,onScale,width,dragHandlers,draggable=true
+        title,onClose,onHide,onScale,dragHandlers,draggable=true
     }: BaseLayoutHeaderProps) => {
     return (
-        <div {...dragHandlers()} style={{width: `calc(${width} + 2px)`}} className={styles.header}>
+        <div {...dragHandlers()} style={{width: `100%`}} className={styles.header}>
             <div className={styles.header__buttons}>
                 {onClose && <HeaderCircle color="red" onClick={onClose}/>}
                 {onHide && <HeaderCircle color="green" onClick={onHide}/>}

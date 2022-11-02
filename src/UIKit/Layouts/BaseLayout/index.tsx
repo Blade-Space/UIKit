@@ -132,7 +132,6 @@ const BaseLayout = (
             <BaseLayoutHeader 
                 dragHandlers={bindWindowPos}
                 title={title} 
-                width={ownSize.width}
                 onClose={onClose} 
                 onHide={onHide}
                 onScale={Scaling ? ScalingHandler : undefined}
