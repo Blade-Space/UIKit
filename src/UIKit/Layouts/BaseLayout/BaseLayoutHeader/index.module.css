@@ -14,8 +14,9 @@
     grid-template-columns: 2fr 8fr 2fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
-    grid-template-areas: 
-      "buttons title nothing"; 
+    grid-template-areas: "buttons title nothing"; 
+
+    touch-action: "none",
 }
 
 .header__buttons {
