@@ -2,10 +2,9 @@
     background-color: #1E1E1E;
     border-radius: 0px 0px 15px 15px;
     border: 1px solid #848484;
-    transition: width 0.3s, height 0.3s;
+    transition: width 0.1s, height 0.1s;
     overflow-y: auto;
-    display: relative;
-    resize: both;
+    /* display: relative; */
     min-width: 450px;
 }
 

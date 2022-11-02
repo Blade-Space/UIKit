@@ -24,7 +24,7 @@ export const Default: Story<BaseLayoutProps> = (args) => {
     _setZBiggest(n)
   }
 return ( 
-    <BaseLayout {...args} Scaling BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
+    <BaseLayout {...args} Scaling={true} BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
   )
 };
 Default.args = {

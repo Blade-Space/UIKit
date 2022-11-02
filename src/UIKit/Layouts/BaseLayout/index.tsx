@@ -127,7 +127,7 @@ const BaseLayout = (
                 position: 'absolute',
                 left: x,
                 top: y,
-                zIndex: zIndex
+                zIndex: zIndex,
         }}>
             <BaseLayoutHeader 
                 dragHandlers={bindWindowPos}
@@ -136,7 +136,7 @@ const BaseLayout = (
                 onHide={onHide}
                 onScale={Scaling ? ScalingHandler : undefined}
                 />
-            <div style={{height: ownSize.height, width: ownSize.width}} className={styles.content}>
+            <div style={{height: ownSize.height, width: ownSize.width, resize: Scaling ? "both" : "none"}} className={styles.content}>
                 {children} 
             </div>
         </animated.div>
