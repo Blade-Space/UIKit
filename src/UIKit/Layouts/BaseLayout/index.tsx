@@ -17,7 +17,7 @@ export interface BaseLayoutProps {
     onHide?: () => void;
     /** */
     /**Permission to scale */
-    Scaling?: boolean;
+    scaling?: boolean;
     /**Permission to draggable */
     draggable?: boolean;
     /**default window sizes */
@@ -31,7 +31,7 @@ export interface BaseLayoutProps {
         y: number;
     };
     /**the highest value of the layer at the moment and the function for changing it */
-    BiggestValueOfTheLayer: {
+    biggestValueOfTheLayer: {
         value: number;
         setValue: (value: number) => void;
     }
@@ -44,10 +44,10 @@ const BaseLayout = (
         onHide=undefined,
         size: {width="420px", height="310px"}, 
         title,
-        Scaling=false,
+        scaling=false,
         draggable,
         openPosition,
-        BiggestValueOfTheLayer
+        biggestValueOfTheLayer
     }: BaseLayoutProps) => {
 
         const [{x, y}, api] = useSpring(() => ({ x: openPosition.x, y: openPosition.y }))
@@ -55,16 +55,16 @@ const BaseLayout = (
         const [windowSize, setWindowSize] = React.useState(getWindowSize());                        // user window inner size {innerWidth, innerHeight} = window
         const [ownSize, setOwnSize] = React.useState({width, height})                               // layout own size
         const [cordinates, setCordinates] = React.useState({x: openPosition.x , y: openPosition.y}) // save the coordinates, to return to the places after the cancellation of scaling
-        const [isScaling, setIsScaling] = React.useState(false);                                    // is the window Scaling
+        const [isScaling, setIsScaling] = React.useState(false);                                    // is the window scaling
         const [isDragAllow, setIsDragAllow] = React.useState(draggable);                            // is it allowed to move the layout on the screen
-        const [zIndex, setZIndex] = React.useState(BiggestValueOfTheLayer.value);                   // layout layer
+        const [zIndex, setZIndex] = React.useState(biggestValueOfTheLayer.value);                   // layout layer
         
         /** **Function for moving around the screen** */
         const bindWindowPos = useDrag(                                                              
             (params) => {   
-                if (zIndex <= BiggestValueOfTheLayer.value) {
-                    setZIndex(BiggestValueOfTheLayer.value + 2)
-                    BiggestValueOfTheLayer.setValue(BiggestValueOfTheLayer.value + 1)              
+                if (zIndex <= biggestValueOfTheLayer.value) {
+                    setZIndex(biggestValueOfTheLayer.value + 2)
+                    biggestValueOfTheLayer.setValue(biggestValueOfTheLayer.value + 1)              
                 }
                 setCordinates({
                     x: openPosition.x + params.offset[0],
@@ -134,9 +134,9 @@ const BaseLayout = (
                 title={title} 
                 onClose={onClose} 
                 onHide={onHide}
-                onScale={Scaling ? ScalingHandler : undefined}
+                onScale={scaling ? ScalingHandler : undefined}
                 />
-            <div style={{height: ownSize.height, width: ownSize.width, resize: Scaling ? "both" : "none"}} className={styles.content}>
+            <div style={{height: ownSize.height, width: ownSize.width, resize: scaling ? "both" : "none"}} className={styles.content}>
                 {children} 
             </div>
         </animated.div>

@@ -24,7 +24,7 @@ export const Default: Story<BaseLayoutProps> = (args) => {
     _setZBiggest(n)
   }
 return ( 
-    <BaseLayout {...args} Scaling={true} BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
+    <BaseLayout {...args} scaling={true} biggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
   )
 };
 Default.args = {
@@ -54,8 +54,8 @@ export const ThreeWindows: Story<BaseLayoutPropsForThreeWindows> = (args) => {
 return ( 
   <div>
     <BaseLayout 
-      Scaling
-      BiggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
+      scaling
+      biggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
       title={"window1"}  
       onHide={() => {alert("onHide")}} 
       onClose={() => {alert("onClose")}} 
@@ -70,8 +70,8 @@ return (
         <div style={styleForDiv}><Text size="large 24px">Window 1🥱</Text></div>
     </BaseLayout>
     <BaseLayout 
-      Scaling
-      BiggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
+      scaling
+      biggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
       title={"window2"}  
       onHide={() => {alert("onHide")}} 
       onClose={() => {alert("onClose")}} 
@@ -86,8 +86,8 @@ return (
         <div style={styleForDiv}><Text size="large 24px">Window 2🔥</Text></div>
     </BaseLayout>
     <BaseLayout 
-      Scaling
-      BiggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
+      scaling
+      biggestValueOfTheLayer={{ value: zBiggest, setValue: setZBiggest }} 
       title={"window3"}  
       onHide={() => {alert("onHide")}} 
       onClose={() => {alert("onClose")}} 
@@ -113,7 +113,7 @@ export const WithOutScale: Story<BaseLayoutProps> = (args) => {
     _setZBiggest(n)
   }
 return ( 
-    <BaseLayout {...args} BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
+    <BaseLayout {...args} biggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
   )
 };
 WithOutScale.args = {
@@ -133,7 +133,7 @@ export const WithOutButtons: Story<BaseLayoutProps> = (args) => {
     _setZBiggest(n)
   }
 return ( 
-    <BaseLayout {...args} BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
+    <BaseLayout {...args} biggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
   )
 };
 WithOutButtons.args = {
@@ -153,7 +153,7 @@ export const NotDraggable: Story<BaseLayoutProps> = (args) => {
     _setZBiggest(n)
   }
 return ( 
-    <BaseLayout {...args} Scaling BiggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
+    <BaseLayout {...args} scaling biggestValueOfTheLayer={{value:zBiggest, setValue: setZBiggest}} />
   )
 };
 NotDraggable.args = {
