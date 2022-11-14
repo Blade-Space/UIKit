@@ -1,0 +1,34 @@
+.container {
+    height: 50px;
+    background-color: #262626;
+    padding: 25px 18px;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__arrows {
+    margin-right: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.container__column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__column_buttons {
+    display: flex;
+    align-items: center;
+}
+
+.container__change_view {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    justify-content: space-between;
+}
