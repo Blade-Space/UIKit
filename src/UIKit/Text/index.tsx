@@ -6,7 +6,6 @@ export interface Props {
     size?: 'tiny 13px' | 'small 14px' | 'medium 15px' | 'default 16px' | 'large 24px'
     bold?: boolean
     italic?: boolean
-    pointer?: boolean
     color?: 'white' | 'blue' | 'gray' | 'dark gray'
     onClick?: MouseEventHandler<HTMLParagraphElement>,
     // font?: "Inconsolata"
@@ -18,9 +17,8 @@ const Text = (
             size="default 16px", 
             bold=false,
             italic=false,
-            pointer=false,
             color="white",
-            onClick,
+            onClick=undefined,
             // font="Inconsolata"
         }: Props) => {
 
@@ -48,7 +46,7 @@ const Text = (
                     fontWeight: bold ? 'bold' : 'normal',
                     fontStyle: italic ? 'italic' : 'normal',
                     color: colorConvertToHex(color),
-                    cursor: pointer ? 'pointer' : 'select',
+                    cursor: onClick ? 'pointer' : 'select',
                     // fontFamily: font
                 }
             }

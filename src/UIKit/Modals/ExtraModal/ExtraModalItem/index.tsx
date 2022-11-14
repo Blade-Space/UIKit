@@ -5,7 +5,7 @@ import Text from '../../../Text';
 
 export interface ExtraModalItemProps {
     children: React.ReactNode
-    onClick: MouseEventHandler<HTMLLIElement>
+    onClick: MouseEventHandler<HTMLParagraphElement>
     className?: string
     Icon?: {
         type: "img" | "svg"
@@ -17,7 +17,6 @@ const ExtraModalItem = ({children="element", className=styles.li, onClick, Icon}
     return (
         <li 
             className={className} 
-            onClick={onClick}
             style={{
                 listStyleType: "none"
             }}
@@ -25,12 +24,12 @@ const ExtraModalItem = ({children="element", className=styles.li, onClick, Icon}
         {Icon ? 
             <div className={styles.li_container}>
                 <img src={Icon.url}  />
-                <Text pointer>{children}</Text>
+                <Text onClick={onClick}>{children}</Text>
             </div>
 
             :
 
-            <Text pointer>{children}</Text>}
+            <Text onClick={onClick}>{children}</Text>}
         </li>
     );
 };
