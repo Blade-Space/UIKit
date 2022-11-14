@@ -1,0 +1,14 @@
+.path {
+    display: flex;
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+}
+
+.item__icon {
+    max-width: 26px;
+    margin: 0 5px 0 10px;
+}
