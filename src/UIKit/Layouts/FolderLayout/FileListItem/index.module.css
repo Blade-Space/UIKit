@@ -1,0 +1,43 @@
+.container {  
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "file__name file__data file__type file__size";
+
+    padding: 8px 16px;
+    border-radius: 5px;
+  }
+  
+  .file__name { 
+    grid-area: file__name;
+    display: flex;
+    align-items: center;
+ }
+
+ .file__icon {
+    margin-right: 10px;
+ }
+  
+  .file__data { 
+    grid-area: file__data;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+  
+  .file__type { 
+    grid-area: file__type;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+  
+  .file__size { 
+    grid-area: file__size;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+  
