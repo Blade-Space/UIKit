@@ -12,7 +12,9 @@ jobs:
         with:
           persist-credentials: false
       - name: Install
-        run: npm ci
+        run: rm package-lock.json
+      - name: Install
+        run: CI=false npm install
       - name:  Build 🔧
         run: npm run build-storybook
       - name: Deploy 🚀
