@@ -17,12 +17,19 @@ jobs:
           node-version: ${{matrix.node-version}}
           cache: yarn
       - run: yarn
+        working-directory: ./
       - run: yarn install --frozen-lockfile
+        working-directory: ./
       - run: yarn build-storybook
+        working-directory: ./
       - run: rm -rf docs/assets 
+        working-directory: ./
       - run: cp -r public/assets docs
+        working-directory: ./
       - run: ls -la 
+        working-directory: ./
       - run: ls -la docs
+        working-directory: ./
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
