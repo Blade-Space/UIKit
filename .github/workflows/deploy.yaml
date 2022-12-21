@@ -19,6 +19,8 @@ jobs:
       - run: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build-storybook
+      - run: rm -rf docs/assets 
+      - run: cp -r public/assets docs
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
