@@ -21,7 +21,6 @@ const DefaultButton = ({children, onClick, typical=false, success=true}: Props) 
                     size='medium 15px'
                     bold={false} 
                     italic={false} 
-                    pointer={false} 
                     color={'white'} 
                     onClick={onClick}
                     >

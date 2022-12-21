@@ -30,8 +30,7 @@ const DefaultLongButton = ({children, onClick, success=true, width="inline-block
                 <Text 
                     size='medium 15px'
                     bold={false} 
-                    italic={false} 
-                    pointer={false} 
+                    italic={false}
                     color={'white'} 
                     onClick={onClick}
                     >

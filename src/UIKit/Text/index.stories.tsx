@@ -14,7 +14,6 @@ Default.args = {
     size: "default 16px",
     bold: false,
     italic: false,
-    pointer: true,
     color: 'white',
     onClick: () => {console.log("some action");
     }

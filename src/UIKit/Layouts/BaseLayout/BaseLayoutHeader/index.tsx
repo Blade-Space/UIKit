@@ -20,10 +20,10 @@ export interface BaseLayoutHeaderProps {
     dragHandlers: (...args: any[]) => ReactDOMAttributes
 }
 
-const BaseLayoutHeader = (
+const BaseLayoutHeader: React.FC<BaseLayoutHeaderProps> = (
     {
         title,onClose,onHide,onScale,dragHandlers,draggable=true
-    }: BaseLayoutHeaderProps) => {
+    }) => {
     return (
         <div {...dragHandlers()} style={{width: `100%`}} className={styles.header}>
             <div className={styles.header__buttons}>

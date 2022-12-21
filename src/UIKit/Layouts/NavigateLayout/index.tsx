@@ -1,11 +1,10 @@
 import React from 'react';
-import styles from './index.module.css';
 
 export interface Props {
     children: JSX.Element 
 }
 
-const NavigateLayout = ({children}: Props) => {
+const NavigateLayout: React.FC<Props> = ({children}) => {
     return (
         <div>
            {children} 
