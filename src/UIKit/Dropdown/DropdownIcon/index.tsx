@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React from 'react';
 import styles from './index.module.css';
 
 // import Text from '../Text';
@@ -7,7 +7,7 @@ export interface DropdownIconProps {
     isActive: boolean
 }
 
-const DropdownIcon = ({isActive}: DropdownIconProps) => {
+const DropdownIcon: React.FC<DropdownIconProps> = ({isActive}) => {
 
     return (
         <svg 

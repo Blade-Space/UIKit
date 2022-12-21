@@ -1,14 +1,11 @@
-import React, { MouseEventHandler } from 'react';
-import styles from './index.module.css';
-
-import Text from '../../../Text';
+import React from 'react';
 
 export interface SmallDescriptonLinkProps {
     link: string
     className?: string
 }
 
-const SmallDescriptonLink = ({className, link}: SmallDescriptonLinkProps) => {
+const SmallDescriptonLink: React.FC<SmallDescriptonLinkProps> = ({className, link}) => {
     return (
         <a href={link}>
             <svg 

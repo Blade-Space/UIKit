@@ -37,7 +37,7 @@ export interface BaseLayoutProps {
     }
 }
 
-const BaseLayout = (
+const BaseLayout: React.FC<BaseLayoutProps> = (
     {
         children, 
         onClose=undefined, 
@@ -48,7 +48,7 @@ const BaseLayout = (
         draggable,
         openPosition,
         biggestValueOfTheLayer
-    }: BaseLayoutProps) => {
+    }) => {
 
         const [{x, y}, api] = useSpring(() => ({ x: openPosition.x, y: openPosition.y }))
 

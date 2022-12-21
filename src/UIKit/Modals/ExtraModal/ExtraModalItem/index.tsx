@@ -23,7 +23,7 @@ const ExtraModalItem = ({children="element", className=styles.li, onClick, Icon}
         >   
         {Icon ? 
             <div className={styles.li_container}>
-                <img src={Icon.url}  />
+                <img src={Icon.url} alt="icon" />
                 <Text onClick={onClick}>{children}</Text>
             </div>
 
