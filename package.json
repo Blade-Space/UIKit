@@ -29,6 +29,11 @@
     "sb": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
+  "storybook-deployer": {
+    "gitUsername": "GH Pages Bot",
+    "gitEmail": "burkenya.egor@gmail.com",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
