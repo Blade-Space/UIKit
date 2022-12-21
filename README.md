@@ -4,7 +4,7 @@
     href="https://github.com/Blade-Space" 
     rel="noopener" 
     target="_blank">
-        <img width="150" src="./docs/public/static/LOGO_2.svg" alt="Server os | UIKit">
+        <img width="150" src="./public/assets/Logo/LOGO.svg" alt="Server os | UIKit">
     </a>
 </p>
 
