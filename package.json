@@ -1,15 +1,18 @@
 {
   "name": "uikit",
+  "description": "UIKit for server os",
+  "author": "egorkaBurkenya <sleepyegorka@gmail.com>, nik19ta <nik19ta.me@gmail.com>",
+  "keywords": ["react", "components", "ui", "uikit", "server-os"],
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Blade-Space/UIKit.git"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.0",
-    "@types/react": "^18.0.21",
-    "@types/react-dom": "^18.0.6",
     "@use-gesture/react": "^10.2.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,7 +21,6 @@
     "react-three-fiber": "^6.0.13",
     "react-use-gesture": "^9.1.3",
     "simplebar-react": "^2.4.3",
-    "typescript": "^4.8.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -77,6 +79,14 @@
     "eslint-plugin-react-css-module-hints": "^1.0.1",
     "prop-types": "^15.8.1",
     "typings-for-css-modules-loader": "^1.7.0",
-    "webpack": "^5.74.0"
+    "webpack": "^5.74.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.8.4"
   }
 }
