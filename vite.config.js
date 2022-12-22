@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 import svgrPlugin from 'vite-plugin-svgr';
+import dts from "vite-plugin-dts";
 // import vitePluginCssModules from "vite-plugin-css-modules";
 
 export default defineConfig({
@@ -13,11 +14,11 @@ export default defineConfig({
             fileName: (format) => `uikit.${format}.js`
         },
         rollupOptions: {
-            external: ['react', 'react-dom'],
+            external: ['react', 'reactDom'],
             output: {
                 globals: {react: 'React'}
             }
         }
     },
-    plugins: [react(), viteTsconfigPaths(), svgrPlugin()]
+    plugins: [react(), viteTsconfigPaths(), svgrPlugin(), dts({insertTypesEntry: true})]
 })

@@ -2,14 +2,14 @@ import React, { MouseEventHandler } from 'react';
 import styles from './index.module.css';
 import Text from '../../Text';
 
-export interface Props {
+export interface IDefaultLongButtonProps {
     children: JSX.Element | string
     success: boolean
     onClick: MouseEventHandler<HTMLParagraphElement>
     width?: "260px" | "inline-block"
 }
 
-const DefaultLongButton = ({children, onClick, success=true, width="inline-block"}: Props) => {
+const DefaultLongButton = ({children, onClick, success=true, width="inline-block"}: IDefaultLongButtonProps) => {
 
     // const [isAimed, setIsAimed] = React.useState<0|1|2|3>(0);
 
