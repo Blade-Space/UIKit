@@ -2,15 +2,25 @@
   "name": "server-os-uikit",
   "description": "UIKit for server os",
   "author": "egorkaBurkenya <sleepyegorka@gmail.com>, nik19ta <nik19ta.me@gmail.com>",
-  "keywords": ["react", "components", "ui", "uikit", "server-os"],
-  "version": "0.1.0",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "uikit",
+    "server-os"
+  ],
+  "version": "0.1.2",
   "private": false,
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md",
+    "src/UIKit"
+  ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/Blade-Space/UIKit.git"
+    "type": "git",
+    "url": "git+https://github.com/Blade-Space/UIKit.git"
   },
   "dependencies": {
     "@use-gesture/react": "^10.2.21",
@@ -29,7 +39,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sb": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -o docs-build"
+    "build-storybook": "build-storybook -o docs-build",
+    "npm:build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
   },
   "storybook-deployer": {
     "gitUsername": "GH Pages Bot",
@@ -75,11 +86,7 @@
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.13",
     "@storybook/testing-library": "^0.0.13",
-    "babel-plugin-named-exports-order": "^0.0.2",
-    "eslint-plugin-react-css-module-hints": "^1.0.1",
-    "prop-types": "^15.8.1",
-    "typings-for-css-modules-loader": "^1.7.0",
-    "webpack": "^5.74.0",
+    "@testing-library/dom": "^8.19.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -87,6 +94,19 @@
     "@types/node": "^16.18.0",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "typescript": "^4.8.4"
+    "@vitejs/plugin-react": "^3.0.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "c8": "^7.12.0",
+    "eslint": "^8.30.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-css-module-hints": "^1.0.1",
+    "jsdom": "^20.0.3",
+    "prop-types": "^15.8.1",
+    "react-test-renderer": "^18.2.0",
+    "typescript": "^4.8.4",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "vite": "^4.0.3",
+    "vitest": "^0.26.2",
+    "webpack": "^5.74.0"
   }
 }
