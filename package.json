@@ -9,10 +9,10 @@
     "uikit",
     "server-os"
   ],
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/uikit.es.js",
+  "module": "dist/uikit.es.js",
   "files": [
     "dist",
     "README.md",
@@ -36,6 +36,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "vite:build": "vite build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sb": "start-storybook -p 6006 -s public",
