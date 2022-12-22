@@ -1,6 +1,9 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import viteTsconfigPaths from 'vite-tsconfig-paths';
+import svgrPlugin from 'vite-plugin-svgr';
+// import vitePluginCssModules from "vite-plugin-css-modules";
 
 export default defineConfig({
     build: {
@@ -16,5 +19,5 @@ export default defineConfig({
             }
         }
     },
-    plugins: [react()]
+    plugins: [react(), viteTsconfigPaths(), svgrPlugin()]
 })

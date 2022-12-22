@@ -4,8 +4,8 @@ import Text from '../../Text';
 
 export interface Props {
     children: JSX.Element | string
-    success: boolean
-    typical: boolean
+    success?: boolean
+    typical?: boolean
     onClick: MouseEventHandler<HTMLParagraphElement>
 }
 
