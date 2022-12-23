@@ -1,10 +1,9 @@
 import React, {InputHTMLAttributes} from 'react';
-import { InputDispatchSetState } from '../../types/hooksTypes';
 import styles from './index.module.css';
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
     value: string | number
-    setValue: InputDispatchSetState
+    setValue: ((arg0: string) => void)
     placeholder?: string
     isSuccess?: "none" | "success" | "warning"
     

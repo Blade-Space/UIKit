@@ -3,11 +3,11 @@ import styles from './index.module.css';
 
 import Text from '../Text';
 import DropdownIcon from './DropdownIcon';
-import ExtraModal, {ExtraModalItemOrLine} from '../Modals/ExtraModal';
+import ExtraModal, {IExtraModalItemOrLine} from '../Modals/ExtraModal';
 
 export interface IDropdownProps {
     defaultValue: string
-    items: ExtraModalItemOrLine[]
+    items: IExtraModalItemOrLine[]
     onChange: (value: React.ReactNode) => void;
     description?: {
         text: string
