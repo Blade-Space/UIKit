@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.css';
 
-import Text from '../../../Text';
-import Input from '../../../Input';
+import Text from '../../Text';
+import Input from '../../Input';
 
 import Arrow from './GraphicButtons/Arrow';
 import Filter from './GraphicButtons/Filter';
