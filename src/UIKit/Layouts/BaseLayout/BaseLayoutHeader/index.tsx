@@ -4,25 +4,17 @@ import Text from '../../../Text';
 import HeaderCircle from './HeaderCircle';
 import styles from './index.module.css';
 
-export interface BaseLayoutHeaderProps {
+export interface IBaseLayoutHeaderProps {
     title: string
-    draggable?: boolean
-    /**function for closing the window*/
-    onClose?: React.MouseEventHandler<HTMLParagraphElement>
-    /**function for hiding the window */
-    onHide?: React.MouseEventHandler<HTMLParagraphElement>
-    /**function for scaling the window */
-    onScale?: React.MouseEventHandler<HTMLParagraphElement>
-    /**
-     * all drag handlers 
-     *! FIXME: the value should not be undefined 
-     * */
     dragHandlers: (...args: any[]) => ReactDOMAttributes
+    onClose?: React.MouseEventHandler<HTMLParagraphElement>
+    onHide?: React.MouseEventHandler<HTMLParagraphElement>
+    onScale?: React.MouseEventHandler<HTMLParagraphElement>
 }
 
-const BaseLayoutHeader: React.FC<BaseLayoutHeaderProps> = (
+const BaseLayoutHeader: React.FC<IBaseLayoutHeaderProps> = (
     {
-        title,onClose,onHide,onScale,dragHandlers,draggable=true
+        title, onClose, onHide, onScale, dragHandlers
     }) => {
     return (
         <div {...dragHandlers()} style={{width: `100%`}} className={styles.header}>

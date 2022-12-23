@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import BaseLayout from "./index";
-import {BaseLayoutProps} from './index'; 
+import {IBaseLayoutProps} from './index'; 
 
 import Text from '../../Text';
 
@@ -17,7 +17,7 @@ const styleForDiv = {
   justifyContent: "center"
 }
 
-export const Default: Story<BaseLayoutProps> = (args) => {
+export const Default: Story<IBaseLayoutProps> = (args) => {
   const [zBiggest, _setZBiggest] = React.useState(1);
   
   const setZBiggest = (n: number) => {
@@ -39,9 +39,9 @@ Default.args = {
 
 
 interface BaseLayoutPropsForThreeWindows {
-  first: BaseLayoutProps
-  second: BaseLayoutProps
-  three: BaseLayoutProps
+  first: IBaseLayoutProps
+  second: IBaseLayoutProps
+  three: IBaseLayoutProps
 }
 
 export const ThreeWindows: Story<BaseLayoutPropsForThreeWindows> = (args) => {
@@ -106,7 +106,7 @@ return (
 };
 ThreeWindows.args = {};
 
-export const WithOutScale: Story<BaseLayoutProps> = (args) => {
+export const WithOutScale: Story<IBaseLayoutProps> = (args) => {
   const [zBiggest, _setZBiggest] = React.useState(1);
   
   const setZBiggest = (n: number) => {
@@ -126,7 +126,7 @@ WithOutScale.args = {
   onHide: () => {alert("onHide")}
 };
 
-export const WithOutButtons: Story<BaseLayoutProps> = (args) => {
+export const WithOutButtons: Story<IBaseLayoutProps> = (args) => {
   const [zBiggest, _setZBiggest] = React.useState(1);
   
   const setZBiggest = (n: number) => {
@@ -146,7 +146,7 @@ WithOutButtons.args = {
   openPosition: {x: 50, y: 0}
 };
 
-export const NotDraggable: Story<BaseLayoutProps> = (args) => {
+export const NotDraggable: Story<IBaseLayoutProps> = (args) => {
   const [zBiggest, _setZBiggest] = React.useState(1);
   
   const setZBiggest = (n: number) => {
