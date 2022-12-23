@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './index.module.css';
 
-import Text from '../../../Text';
-import { useGetIcon } from '../../../../hooks/getIconHook';
-import {useFormatBytes} from '../../../../hooks/formatBytes';
+import Text from '../../Text';
+import { useGetIcon } from '../../../hooks/useGetIcon';
+import {useFormatBytes} from '../../../hooks/useFormatBytes';
 
-export interface FileListItemProps {
+export interface IFileListItemProps {
     name: string;
     date: string;
     type: string;
@@ -14,11 +14,14 @@ export interface FileListItemProps {
     onOpen?: React.MouseEventHandler<HTMLParagraphElement>
 }
 
-const FileListItem = ({name, date, type, size, onOpen=undefined, backgroundColor=false}: FileListItemProps) => {
+const FileListItem = (
+    {name, date, type, size, onOpen=undefined, backgroundColor=false}: IFileListItemProps
+    ) => {
 
     const formatedSize = useFormatBytes(size, 2) 
-
-    const icon = useGetIcon(name.includes(".") ? name.split(".")[1] : "folder")
+    const {icon_getter} = useGetIcon()
+    
+    const icon = icon_getter(name.includes(".") ? name.split(".")[1] : "folder") 
 
     return (
         <div 

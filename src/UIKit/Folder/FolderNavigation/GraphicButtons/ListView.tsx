@@ -1,11 +1,11 @@
 import React from 'react';
 
-export interface ListViewProps {
+export interface IListViewProps {
     active: boolean;
     onClick?: React.MouseEventHandler<SVGSVGElement>
 }
 
-const ListView = ({onClick=undefined, active}: ListViewProps) => {
+const ListView = ({onClick=undefined, active}: IListViewProps) => {
     return (
         <svg 
             style={{cursor: 'pointer'}}

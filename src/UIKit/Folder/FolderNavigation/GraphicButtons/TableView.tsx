@@ -1,11 +1,11 @@
 import React from 'react';
 
-export interface TableViewProps {
+export interface ITableViewProps {
     active: boolean;
     onClick?: React.MouseEventHandler<SVGSVGElement>
 }
 
-const TableView = ({onClick=undefined, active}: TableViewProps) => {
+const TableView = ({onClick=undefined, active}: ITableViewProps) => {
     return (
         <svg 
             onClick={onClick}

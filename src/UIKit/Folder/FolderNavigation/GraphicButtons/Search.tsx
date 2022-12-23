@@ -1,10 +1,10 @@
 import React from 'react';
 
-export interface SearchProps {
+export interface ISearchProps {
     onClick?: React.MouseEventHandler<SVGSVGElement>
 }
 
-const Search = ({onClick=undefined}: SearchProps) => {
+const Search = ({onClick=undefined}: ISearchProps) => {
     return (
         <svg 
             onClick={onClick}

@@ -1,10 +1,10 @@
 import React from 'react';
 
-export interface FilterProps {
+export interface IFilterProps {
     onClick?: React.MouseEventHandler<SVGSVGElement>
 }
 
-const Filter = ({onClick=undefined}: FilterProps) => {
+const Filter = ({onClick=undefined}: IFilterProps) => {
     return (
         <svg 
             onClick={onClick}

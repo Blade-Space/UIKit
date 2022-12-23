@@ -1,11 +1,11 @@
 import React from 'react';
 
-export interface ArrowProps {
+export interface IArrowProps {
     orientation: "left" | "right" 
     onClick?: React.MouseEventHandler<SVGSVGElement>
 }
 
-const Arrow = ({orientation, onClick=undefined}: ArrowProps) => {
+const Arrow = ({orientation, onClick=undefined}: IArrowProps) => {
     return (
             <svg
                 onClick={onClick}

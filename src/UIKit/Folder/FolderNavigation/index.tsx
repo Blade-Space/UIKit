@@ -9,26 +9,27 @@ import Filter from './GraphicButtons/Filter';
 import ListView from './GraphicButtons/ListView';
 import Search from './GraphicButtons/Search';
 import TableView from './GraphicButtons/TableView';
-import { InputDispatchSetState } from '../../../../types/hooksTypes';
 
-export interface FolderNavigationProps {
-    onBack?: React.MouseEventHandler<SVGSVGElement>
-    onForward?: React.MouseEventHandler<SVGSVGElement>
-    changeView: React.MouseEventHandler<SVGSVGElement>
-    onFilter: React.MouseEventHandler<SVGSVGElement>
+export type InputDispatchSetState = ((arg0: string) => void)
+
+export interface IFolderNavigationProps {
+    changeView: React.MouseEventHandler<SVGSVGElement>;
+    onFilter: React.MouseEventHandler<SVGSVGElement>;
     search: {
-        value: string,
-        onChange: InputDispatchSetState
-    }
+        value: string;
+        onChange: InputDispatchSetState;
+    };
     folder: string;
     className: string;
-    extraModal: React.ReactNode
+    extraModal: React.ReactNode;
     isListView: boolean;
     isChooseFilter: boolean;
+    onBack?: React.MouseEventHandler<SVGSVGElement>;
+    onForward?: React.MouseEventHandler<SVGSVGElement>;
 }
 
 
-const FolderNavigation = ({
+const FolderNavigation: React.FC<IFolderNavigationProps> = ({
     changeView, 
     onBack, 
     onFilter,
@@ -39,7 +40,7 @@ const FolderNavigation = ({
     extraModal,
     isChooseFilter,
     search
-}:FolderNavigationProps) => {
+}) => {
 
     const [isSearchActive, setIsSearchActive] = React.useState(false);
 
