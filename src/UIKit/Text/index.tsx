@@ -1,17 +1,16 @@
 import React, { MouseEventHandler } from 'react';
 import styles from './index.module.css';
 
-export interface Props {
+export interface ITextProps {
     children: React.ReactNode
     size?: 'tiny 13px' | 'small 14px' | 'medium 15px' | 'default 16px' | 'large 24px'
     bold?: boolean
     italic?: boolean
     color?: 'white' | 'blue' | 'gray' | 'dark gray'
     onClick?: MouseEventHandler<HTMLParagraphElement>,
-    // font?: "Inconsolata"
 }
 
-const Text = (
+const Text: React.FC<ITextProps> = (
         {
             children, 
             size="default 16px", 
@@ -19,10 +18,9 @@ const Text = (
             italic=false,
             color="white",
             onClick=undefined,
-            // font="Inconsolata"
-        }: Props) => {
+        }) => {
 
-    const colorConvertToHex = (color: Props["color"]) => {
+    const colorConvertToHex = (color: ITextProps["color"]) => {
         switch (color) {
             case "white":
                 return "#FFFFFF";
@@ -35,11 +33,9 @@ const Text = (
             default:
                 return "#E996B0";
         }
-    }
-            
+    }       
     return (
-        <p 
-            className={styles.text} 
+        <p className={styles.text} 
             style={
                 {
                     fontSize: size.split(' ')[1],
@@ -47,7 +43,6 @@ const Text = (
                     fontStyle: italic ? 'italic' : 'normal',
                     color: colorConvertToHex(color),
                     cursor: onClick ? 'pointer' : 'select',
-                    // fontFamily: font
                 }
             }
             onClick={onClick}

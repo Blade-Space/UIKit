@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 import Text from '../../../Text';
 
-export interface ExtraModalItemProps {
+export interface IExtraModalItemProps {
     children: React.ReactNode
     onClick: MouseEventHandler<HTMLParagraphElement>
     className?: string
@@ -13,7 +13,9 @@ export interface ExtraModalItemProps {
     }
 }
 
-const ExtraModalItem = ({children="element", className=styles.li, onClick, Icon}: ExtraModalItemProps) => {
+const ExtraModalItem: React.FC<IExtraModalItemProps> = (
+    {children="element", className=styles.li, onClick, Icon}
+    ) => {
     return (
         <li 
             className={className} 

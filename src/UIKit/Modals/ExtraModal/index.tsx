@@ -1,27 +1,29 @@
 import React from 'react';
-import ExtraModalItem, {ExtraModalItemProps} from './ExtraModalItem';
+import ExtraModalItem, {IExtraModalItemProps} from './ExtraModalItem';
 import styles from './index.module.css';
 
 import Text from '../../Text';
 import SmallDescriptonLink from './SmallDescriptonLink';
 
-export type ExtraModalItemOrLine = {
+export type IExtraModalItemOrLine = {
     type: "item" | "line"
-    options?: ExtraModalItemProps
+    options?: IExtraModalItemProps
 }
 
-export interface ExtraModalProps {
+export interface IExtraModalProps {
     width?: number
     className?: string
     children?: React.ReactNode
-    items?: ExtraModalItemOrLine[]
+    items?: IExtraModalItemOrLine[]
     description?: {
         text: string
         link: string
     } 
 }
 
-const ExtraModal = ({children, items, description, className, width}: ExtraModalProps) => {
+const ExtraModal: React.FC<IExtraModalProps> = (
+    {children, items, description, className, width}
+    ) => {
     return (
         <div className={`${styles.modal} ${className}`} style={{width}}>
             {children && children}

@@ -1,13 +1,11 @@
 import React from 'react';
 import styles from './index.module.css';
 
-// import Text from '../Text';
-
-export interface DropdownIconProps {
+export interface IDropdownIconProps {
     isActive: boolean
 }
 
-const DropdownIcon: React.FC<DropdownIconProps> = ({isActive}) => {
+const DropdownIcon: React.FC<IDropdownIconProps> = ({isActive}) => {
 
     return (
         <svg 

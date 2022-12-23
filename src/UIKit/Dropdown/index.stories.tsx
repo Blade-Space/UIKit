@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import Dropdown from "./index";
-import {DropdownProps} from './index'; 
+import {IDropdownProps} from './index'; 
 
 export default {
   component: Dropdown,
 } as Meta;
 
-export const Default: Story<DropdownProps> = (args) => <Dropdown {...args} />;
+export const Default: Story<IDropdownProps> = (args) => <Dropdown {...args} />;
 Default.args = {
   defaultValue: "default",
   onChange: (value) => {console.log("value: "+value+" was changed")},
@@ -77,7 +77,7 @@ Default.args = {
     }],
 };
 
-export const WithDescription: Story<DropdownProps> = (args) => <Dropdown {...args} />;
+export const WithDescription: Story<IDropdownProps> = (args) => <Dropdown {...args} />;
 WithDescription.args = {
   defaultValue: "default",
   description: {

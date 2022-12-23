@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import { Meta, Story } from "@storybook/react";
 import Input from "./index";
-import {InputProps} from './index'; 
+import {IInputProps} from './index'; 
 
 
 export default {
   component: Input,
 } as Meta;
 
-export const Default: Story<InputProps> = (args) => {
+export const Default: Story<IInputProps> = (args) => {
   const [localValue, setValue] = useState<string>('');
   const onChangeInput = (inputValue: string) => {setValue(inputValue);}
   return <Input 
@@ -24,7 +24,7 @@ Default.args = {
   isSuccess: "none"
 };
 
-export const Success: Story<InputProps> = (args) => {
+export const Success: Story<IInputProps> = (args) => {
   const [localValue, setValue] = useState<string>('');
   const onChangeInput = (inputValue: string) => {setValue(inputValue);}
   return <Input 
@@ -40,7 +40,7 @@ Success.args = {
   isSuccess: "success"
 };
 
-export const Warning: Story<InputProps> = (args) => {
+export const Warning: Story<IInputProps> = (args) => {
   const [localValue, setValue] = useState<string>('');
   const onChangeInput = (inputValue: string) => {setValue(inputValue);}
   return <Input 

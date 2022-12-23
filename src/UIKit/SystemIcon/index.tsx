@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import styles from './index.module.css';
 
-export interface SystemIconProps {
+export interface ISystemIconProps {
     icon: string
     className?: string
 }
 
-const SystemIcon = ({icon, className}: SystemIconProps) => {
+const SystemIcon: React.FC<ISystemIconProps> = ({icon, className}) => {
 
     const [isHover, serIsHover] = useState(false);
 

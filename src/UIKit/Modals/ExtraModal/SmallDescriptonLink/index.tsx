@@ -1,13 +1,13 @@
 import React from 'react';
 
-export interface SmallDescriptonLinkProps {
+export interface ISmallDescriptonLinkProps {
     link: string
     className?: string
 }
 
-const SmallDescriptonLink: React.FC<SmallDescriptonLinkProps> = ({className, link}) => {
+const SmallDescriptonLink: React.FC<ISmallDescriptonLinkProps> = ({className, link}) => {
     return (
-        <a href={link}>
+        <a className={className} href={link}>
             <svg 
                 width="13" 
                 height="12" 

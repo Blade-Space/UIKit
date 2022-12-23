@@ -4,15 +4,14 @@ import Text from '../../Text';
 
 export interface IDefaultLongButtonProps {
     children: JSX.Element | string
-    success: boolean
     onClick: MouseEventHandler<HTMLParagraphElement>
+    success?: boolean
     width?: "260px" | "inline-block"
 }
 
-const DefaultLongButton = ({children, onClick, success=true, width="inline-block"}: IDefaultLongButtonProps) => {
-
-    // const [isAimed, setIsAimed] = React.useState<0|1|2|3>(0);
-
+const DefaultLongButton: React.FC<IDefaultLongButtonProps> = (
+    {children, onClick, success=true, width="inline-block"}
+    ) => {
     return (
         <button 
             style={{

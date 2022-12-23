@@ -2,14 +2,14 @@ import React, { MouseEventHandler } from 'react';
 import styles from './index.module.css';
 import Text from '../../Text';
 
-export declare interface Props {
+export declare interface IDefaultButtonProps {
     children: JSX.Element | string
     success?: boolean
     typical?: boolean
     onClick: MouseEventHandler<HTMLParagraphElement>
   }
 
-const DefaultButton: React.FC<Props> = ({children, onClick, typical=false, success=true}) => {
+const DefaultButton: React.FC<IDefaultButtonProps> = ({children, onClick, typical=false, success=true}) => {
     return (
         <button 
             className={styles.button}

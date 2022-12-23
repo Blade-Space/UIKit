@@ -5,18 +5,18 @@ import Text from '../Text';
 import DropdownIcon from './DropdownIcon';
 import ExtraModal, {ExtraModalItemOrLine} from '../Modals/ExtraModal';
 
-export interface DropdownProps {
+export interface IDropdownProps {
     defaultValue: string
     items: ExtraModalItemOrLine[]
+    onChange: (value: React.ReactNode) => void;
     description?: {
         text: string
         link: string
     },
     width?: number
-    onChange: (value: React.ReactNode) => void;
 }
 
-const Dropdown = ({defaultValue, items, description, onChange, width=230}: DropdownProps) => {
+const Dropdown: React.FC<IDropdownProps> = ({defaultValue, items, description, onChange, width=230}) => {
 
     const [isActive, setIsActive] = useState(false);
     const [_default, set_Default] = useState<React.ReactNode>(defaultValue); 

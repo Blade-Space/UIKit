@@ -1,14 +1,14 @@
 import * as React from "react";
 import { Meta, Story } from "@storybook/react";
 import ExtraModal from "./index";
-import {ExtraModalProps} from './index'; 
+import {IExtraModalProps} from './index'; 
 import Text from "../../Text";
 
 export default {
   component: ExtraModal,
 } as Meta;
 
-export const Default: Story<ExtraModalProps> = (args) => <ExtraModal {...args} />;
+export const Default: Story<IExtraModalProps> = (args) => <ExtraModal {...args} />;
 Default.args = {
   children: "",
   items: [{
@@ -90,7 +90,7 @@ Default.args = {
 };
 
 
-export const WithDescription: Story<ExtraModalProps> = (args) => <ExtraModal {...args} />;
+export const WithDescription: Story<IExtraModalProps> = (args) => <ExtraModal {...args} />;
 WithDescription.args = {
   children: "",
   description: {
@@ -175,7 +175,7 @@ WithDescription.args = {
     }]
 };
 
-export const WithChildren: Story<ExtraModalProps> = (args) => <ExtraModal {...args} />;
+export const WithChildren: Story<IExtraModalProps> = (args) => <ExtraModal {...args} />;
 WithChildren.args = {
   children: <div style={{marginBottom: "12px"}}><Text>Надо придумать как передавать шрифт в компонент Text</Text></div>,
   description: {

@@ -1,38 +1,25 @@
 import React from 'react';
 import styles from './index.module.css';
 
-import {useGetIcon} from '../../hooks/getIconHook';
+import {useGetIcon} from '../../hooks/useGetIcon';
 import Text from '../Text';
 
-export interface PathProps {
+export interface IPathProps {
     path: string;
-    type: "folder" | "file"
+    type?: "folder" | "file"
     className?: string;
 }
 
-const Path = ({path, type, className}: PathProps) => {
+const Path: React.FC<IPathProps> = ({path, type="folder", className}) => {
 
     let fileIcon: string = "";
+
+    const {icon_getter} = useGetIcon();
+
     if (type === "file") {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        fileIcon = useGetIcon(path.split("/")[path.split("/").length-1].split(".")[1])
+        fileIcon = icon_getter(path.split("/")[path.split("/").length-1].split(".")[1])
     }
-    const folderIcon = useGetIcon("folder")
-
-    // const [files, setFiles] = React.useState<{name: string, icon: string}[]>([]);
-
-    // console.log(path.split("/"));
-    
-    // for (let item in path.split("/")) {
-    //     if (item.includes(".")) {
-    //         // setFiles([...files, {name: item, icon: fileIcon}])
-    //         files = [...files, {name: item, icon: fileIcon}]
-    //     } else {
-    //         console.log(1);
-    //         setFiles([...files, {name: item, icon: folderIcon}])
-    //     }
-    // }
-    // }
+    const folderIcon = icon_getter("folder")
     
     return (
         <div className={`${styles.path} ${className}`}>
